@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-info navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" th:href="@{/index}">College Student Management System</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      
+        <li class="nav-item">
+        <a class="nav-link" th:href="@{/students}">Student Management</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" th:href="@{/teachers}">Teacher Management</a>
+        </li>
+        <li class="nav-item">
+       <a class="nav-link" th:href="@{/courses}">Course Management</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" th:href="@{/elementcourses}">Course Element Information </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" th:href="@{/departments}">List of Departments</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" th:href="@{/majors}">List of Majors</a>
+       </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" th:src="@{/images/im3.jpg}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" th:src="@{/images/im2.jpg}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" th:src="@{/images/im1.jpg}" alt="Third slide">
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" th:src="@{/images/3.jpg}" alt="Card image cap">
+    <div class="card-body">
+      <a class="btn btn-warning btn-sm mb-3" th:href="@{/students}">Student List</a>
+      <a th:href="@{students/new}" class="btn btn-primary btn-sm mb-3">Add new Student</a>
+      <p class="card-text">Show Students' List</p>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img class="card-img-top" th:src="@{/https://www.blackboard.com/sites/default/files/2020-08/Student-Resources-Social-Card.jpg}" alt="Card image cap">
+    <div class="card-body">
+   	  <a class="btn btn-warning btn-sm mb-3" th:href="@{/courses}">Course List</a>
+      
+      <p class="card-text">Show List of Courses</p>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img class="card-img-top"  th:src="@{/images/2.jpg}" alt="Card image cap">
+    <div class="card-body">
+      <a class="btn btn-warning btn-sm mb-3" th:href="@{/teachers}">Teachers' List</a>
+      <p class="card-text">Show Teacher's List</p>
+    </div>
+    
+  </div>
+  
+</div>
+
+<br>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
