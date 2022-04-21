@@ -22,7 +22,7 @@ public class CourseController {
 	}
 	
 	/* handler
-	 * 
+	 * below
 	 */
 	
 	@GetMapping("/courses")
