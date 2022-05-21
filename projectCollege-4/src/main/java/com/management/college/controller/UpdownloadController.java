@@ -34,7 +34,7 @@ public class UpdownloadController {
 	  model.addAttribute("list", list);
 	  return "Updownload";
 	 }
-	 @PostMapping("/Updownload/upload")
+	 @PostMapping("/upload")
 	 public String fileUpload(@RequestParam("file") MultipartFile file,  Model model) throws IOException {
 		 Updownload updownload = new Updownload();
 		  String fileName = file.getOriginalFilename();
@@ -48,7 +48,7 @@ public class UpdownloadController {
 	 }
 	 
 	 
-	 @GetMapping("/Updownload/downloadfile")
+	 @GetMapping("/downloadfile")
 	 public void downloadFile(@Param("id") Long id , Model model, HttpServletResponse response) throws IOException {
 	  Optional<Updownload> temp = service.findUpdownloadById(id);
 	  if(temp!=null) {
@@ -73,5 +73,4 @@ public class UpdownloadController {
 	  response.getOutputStream().close();
 	 }
 	}
-
 

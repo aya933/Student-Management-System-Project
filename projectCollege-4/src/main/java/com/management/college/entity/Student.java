@@ -48,6 +48,9 @@ public class Student {
 	@Column (name="studentEMAIL", nullable = false)
 	private String studentEMAIL;
 	
+	@Column (name="studentPASSWORD", nullable = false)
+	private String studentPASSWORD;
+	
 	//JPA Hibernate brings specific info
 	//from different Tables to the current Table
 	@ManyToOne
@@ -62,19 +65,21 @@ public class Student {
 		this.major = major;
 	}
 
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Student(String studentNAME, Date studentBIRTH, String studentNUMBER, String studentGENDER,
-			String studentEMAIL) {
+			String studentEMAIL, String studentPASSWORD, Major major) {
 		super();
 		this.studentNAME = studentNAME;
 		this.studentBIRTH = studentBIRTH;
 		this.studentNUMBER = studentNUMBER;
 		this.studentGENDER = studentGENDER;
 		this.studentEMAIL = studentEMAIL;
-	}
-
-	public Student() {
-		super();
-		// TODO Auto-generated constructor stub
+		this.studentPASSWORD = studentPASSWORD;
+		this.major = major;
 	}
 
 	public Long getStudentid() {
@@ -124,8 +129,14 @@ public class Student {
 	public void setStudentEMAIL(String studentEMAIL) {
 		this.studentEMAIL = studentEMAIL;
 	}
-	
-	
-	
 
+	public String getStudentPASSWORD() {
+		return studentPASSWORD;
+	}
+
+	public void setStudentPASSWORD(String studentPASSWORD) {
+		this.studentPASSWORD = studentPASSWORD;
+	}
+
+	
 }

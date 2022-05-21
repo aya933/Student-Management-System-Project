@@ -82,6 +82,7 @@ public class StudentController {
 		existingStudent.setStudentBIRTH(student.getStudentBIRTH());
 		existingStudent.setStudentGENDER(student.getStudentGENDER());
 		existingStudent.setStudentEMAIL(student.getStudentEMAIL());
+		existingStudent.setStudentPASSWORD(student.getStudentPASSWORD());
 
 		// save updated student object
 		studentService.updateStudent(existingStudent);

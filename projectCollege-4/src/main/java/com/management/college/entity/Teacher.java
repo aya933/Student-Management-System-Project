@@ -24,6 +24,9 @@ public class Teacher {
 	@Column ( name = "teacherNAME", nullable = false)
 	private String teacherNAME;
 	
+	@Column ( name = "teacherNUMBER", nullable = false)
+	private String teacherNUMBER;
+	
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date teacherBIRTH;
 	
@@ -32,6 +35,9 @@ public class Teacher {
 	
 	@Column (name = "teacherEMAIL", nullable = false)
 	private String teacherEMAIL;
+	
+	@Column ( name = "teacherPASSWORD", nullable = false)
+	private String teacherPASSWORD;
 	
 	@ManyToOne
 	@JoinColumn(name = "coursetaught")
@@ -56,14 +62,18 @@ public class Teacher {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-	
 
-	public Teacher(String teacherNAME, Date teacherBIRTH, String teacherGENDER, String teacherEMAIL) {
+	public Teacher(String teacherNAME, String teacherNUMBER, Date teacherBIRTH, String teacherGENDER,
+			String teacherEMAIL, String teacherPASSWORD, Course courseid, Department department) {
 		super();
 		this.teacherNAME = teacherNAME;
+		this.teacherNUMBER = teacherNUMBER;
 		this.teacherBIRTH = teacherBIRTH;
 		this.teacherGENDER = teacherGENDER;
 		this.teacherEMAIL = teacherEMAIL;
+		this.teacherPASSWORD = teacherPASSWORD;
+		this.courseid = courseid;
+		this.department = department;
 	}
 
 	public Teacher() {
@@ -85,6 +95,14 @@ public class Teacher {
 
 	public void setTeacherNAME(String teacherNAME) {
 		this.teacherNAME = teacherNAME;
+	}
+
+	public String getTeacherNUMBER() {
+		return teacherNUMBER;
+	}
+
+	public void setTeacherNUMBER(String teacherNUMBER) {
+		this.teacherNUMBER = teacherNUMBER;
 	}
 
 	public Date getTeacherBIRTH() {
@@ -110,10 +128,25 @@ public class Teacher {
 	public void setTeacherEMAIL(String teacherEMAIL) {
 		this.teacherEMAIL = teacherEMAIL;
 	}
-	
-	
+
+	public String getTeacherPASSWORD() {
+		return teacherPASSWORD;
+	}
+
+	public void setTeacherPASSWORD(String teacherPASSWORD) {
+		this.teacherPASSWORD = teacherPASSWORD;
+	}
+
+	public Course getCourseid() {
+		return courseid;
+	}
+
+	public void setCourseid(Course courseid) {
+		this.courseid = courseid;
+	}
 	
 }
+	
 	
 
 	

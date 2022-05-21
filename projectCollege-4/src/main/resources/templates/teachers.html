@@ -34,10 +34,11 @@
         <a class="nav-link" th:href="@{/results}">Score Management</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" th:href="@{/students}">Student Management</a>
+        <a class="nav-link" th:href="@{/teachers}">Teacher Management</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" th:href="@{/elementcourses}">Course Element Information</a>
+       
       </li>
       <li class="nav-item">
         <a class="nav-link" th:href="@{/departments}">List of Departments</a>
@@ -47,6 +48,9 @@
        </li>
        <li class="nav-item">
         <a class="nav-link" th:href="@{/Updownload}">Files</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" th:href="@{/fees}">Fees Info</a>
        </li>
     </ul>
   </div>
@@ -67,25 +71,30 @@
         <thead class = "table-dark">
              <tr>
                  <th> Teacher ID</th>
-                 <th> Teacher Name</th>
-                 <th> Teacher Email </th>
-                 <th> Teacher Birth Date </th>
-                 <th> Teacher Gender </th>
-                 <th> Department </th>
+                 <th> Passport Number </th>
+                 <th> Name</th>
+                 <th> Email </th>
+                 <th> Birth Date </th>
+                 <th> Gender </th>
+                 <th> Password </th>
                  <th> Course Taught </th>
+                 <th> Department </th>
                  <th> Actions </th>
              </tr>
         </thead>
         <tbody>
              <tr th:each = "teacher: ${teachers}">
 			    <td th:text = "${teacher.teacherid}"></td>
+			    <td th:text = "${teacher.teacherNUMBER}"></td>
 			    <td th:text = "${teacher.teacherNAME}"></td>
 			    <td th:text = "${teacher.teacherEMAIL}"></td>
 			    <td th:text = "${teacher.teacherBIRTH}"></td>
 			    <td th:text = "${teacher.teacherGENDER}"></td>
+			    <td th:text = "${teacher.teacherPASSWORD}"></td>
+			    <td th:text = "${teacher.course.courseNAME}"></td>
 			    <td th:text = "${teacher.department.departmentNAME}"></td>
-			    <td th:text = "${teacher.course.courseNAME}"></td> 
 			    <td>
+			    
 						<a th:href = "@{/teachers/edit/{teacherid}(teacherid=${teacher.teacherid})}"
 						 class = "btn btn-primary">Update</a>
 						 

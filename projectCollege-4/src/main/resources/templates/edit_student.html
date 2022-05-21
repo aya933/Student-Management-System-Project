@@ -30,9 +30,8 @@
 				<div class = "card-body">
 				
 					<form th:action="@{/students/{studentid}(studentid=${student.studentid})}" th:object = "${student}" method="POST">
-						<div class ="form-group">
-
-						<label> Student's Name </label>
+						<div class = "form-group">
+              <label> Student's Name </label>
               <input
               type = "text"
               name = "Name"
@@ -40,6 +39,7 @@
               class = "form-control"
               placeholder="Enter Student's Full Name"
                />
+               
                </div>
                <div class = "form-group">
                <label> Student's Passport Number </label>
@@ -52,10 +52,10 @@
                />
                </div>
                
-               <div class="form-group">
+                <div class="form-group">
 					<strong><label> Major </label></strong>
 					<select th:field="*{major}" class="form-control">
-					<th:block th:each="cor :${listmajor}">
+					<th:block th:each="maj :${listmajor}">
 					<option th:text="${maj.majorNAME}" th:value="${maj.majorid}"/></th:block>
 					</select>
 					</div>
@@ -67,17 +67,17 @@
               name = "Birthdate"
               th:field = "*{studentBIRTH}"
               class = "form-control"
-              placeholder="Enter Student's Birth Date (yyyy-MM-dd)"
+              placeholder="Enter Student's Birth Date"
                />
                </div>
                
-                <div class = "form-group">
-                <label> Gender  </label>
+               <div class = "form-group">
+               <label> Gender </label>
               <select th:field="*{studentGENDER}"
                class = "form-control">
-    		<option th:value="'M'" th:text="Male"></option>
-    		<option th:value="'F'" th:text="Female"></option>
-    		<option th:value="'O'" th:text="Other"></option>
+    		<option th:value="'Male'" th:text="Male"></option>
+    		<option th:value="'Female'" th:text="Female"></option>
+    		<option th:value="'Other'" th:text="Other"></option>
 				</select>
                </div>
                
@@ -91,6 +91,16 @@
               placeholder="Enter Student's Email Address"
                /> 
                </div>
+               
+              <div class = "form-group">
+              <label> Student's Password </label>
+              <input
+              type = "text"
+              name = "Password"
+              th:field = "*{studentPASSWORD}"
+              class = "form-control"
+              placeholder="Enter Student's Password"
+               /></div>
                
                
 

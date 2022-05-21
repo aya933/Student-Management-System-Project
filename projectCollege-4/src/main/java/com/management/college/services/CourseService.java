@@ -17,5 +17,4 @@ public interface CourseService {
 	
 	Course getCourseById(Long id);
 	
-
 }

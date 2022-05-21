@@ -34,7 +34,9 @@
 		
 			<div class = "card-body">
    			 <form th:action="@{/teachers}" th:object = "${teacher}" method="POST">
-         			<div class = "form-group">
+         			<div class ="form-group">
+
+				<div class = "form-group">
               <label> Teacher's Name </label>
               <input
               type = "text"
@@ -45,7 +47,22 @@
                />
                
                </div>
+               </div>
                
+               <div class ="form-group">
+
+				<div class = "form-group">
+              <label> Teacher's Passport Number </label>
+              <input
+              type = "text"
+              name = "Passport"
+              th:field = "*{teacherNUMBER}"
+              class = "form-control"
+              placeholder="Enter Teacher's Passport Number"
+               />
+               
+               </div>
+               </div>
                <div class="form-group">
 					<strong><label> Department </label></strong>
 					<select th:field="*{department}" class="form-control">
@@ -87,6 +104,21 @@
               class = "form-control"
               placeholder="Enter Teacher's Email Address"
                /> 
+               </div>
+               
+               <div class ="form-group">
+
+				<div class = "form-group">
+              <label> Teacher's Password </label>
+              <input
+              type="password"
+              name = "Password"
+              th:field = "*{teacherPASSWORD}"
+              class = "form-control"
+              placeholder="Enter Teacher's Full Name"
+               />
+               
+               </div>
                </div>
                
                <div class="form-group">

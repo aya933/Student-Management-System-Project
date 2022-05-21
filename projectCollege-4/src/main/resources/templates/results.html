@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:th="http://www.thymeleaf.org">
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 <meta charset="UTF-8">
 <title>College Student Management System</title>
@@ -16,7 +17,7 @@
   
 <nav class="navbar navbar-expand-sm .bg-info navbar-light">
   <!-- Brand -->
-  <a class="navbar-brand" th:href="@{/index}">College Student Management System</a>
+   <a class="navbar-brand" th:href="@{/index2}">College Student Management System</a>
 
   <!-- Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -87,11 +88,13 @@
 			    <td th:text = "${result.resultCOMMENT}"></td>
 			    
 			    <td>
+			    <div sec:authorize="hasAuthority('ADMIN','TEACHER')">
 						<a th:href = "@{/results/edit/{resultid}(resultid=${result.resultid})}"
 						 class = "btn btn-primary">Update</a>
-						 
+						 </div>
+						 <div sec:authorize="hasAuthority('ADMIN')">
 						 <a th:href = "@{/results/{resultid}(resultid=${result.resultid})}"
-						 class = "btn btn-danger">Delete</a>
+						 class = "btn btn-danger">Delete</a> </div>
 						 </td>
     
              </tr>
