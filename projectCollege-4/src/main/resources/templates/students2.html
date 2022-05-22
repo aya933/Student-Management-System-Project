@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:th="http://www.thymeleaf.org"
-    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>College Student Management System</title>
@@ -17,7 +16,7 @@
   
 <nav class="navbar navbar-expand-sm .bg-info navbar-light">
   <!-- Brand -->
-   <a class="navbar-brand" th:href="@{/index}">College Student Management System</a>
+  <a class="navbar-brand" th:href="@{/index}">College Student Management System</a>
 
   <!-- Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -49,6 +48,9 @@
        </li>
        <li class="nav-item">
         <a class="nav-link" th:href="@{/Updownload}">Files</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" th:href="@{/fees}">Fees Info</a>
        </li>
     </ul>
   </div>

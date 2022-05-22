@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:th="http://www.thymeleaf.org"
-    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>College Student Management System</title>
@@ -17,7 +16,7 @@
   
 <nav class="navbar navbar-expand-sm .bg-info navbar-light">
   <!-- Brand -->
-   <a class="navbar-brand" th:href="@{/index2}">College Student Management System</a>
+  <a class="navbar-brand" th:href="@{/}">College Student Management System</a>
 
   <!-- Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -35,10 +34,11 @@
         <a class="nav-link" th:href="@{/results}">Score Management</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" th:href="@{/students}">Student Management</a>
+        <a class="nav-link" th:href="@{/teachers}">Teacher Management</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" th:href="@{/elementcourses}">Course Element Information</a>
+       
       </li>
       <li class="nav-item">
         <a class="nav-link" th:href="@{/departments}">List of Departments</a>
@@ -48,6 +48,9 @@
        </li>
        <li class="nav-item">
         <a class="nav-link" th:href="@{/Updownload}">Files</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" th:href="@{/fees}">Fees Info</a>
        </li>
     </ul>
   </div>
